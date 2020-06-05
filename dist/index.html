@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HAR tree viewer</title>
+  <script src="./hartree.min.js"></script>
+  <script>
+    function drawCanvas([file]) {
+      hartree.getTreeHAR(
+        file,
+        document.querySelector('#blacklist').value.split(',')
+      ).then(treeHar => hartree.drawTree(treeHar, 'canvas', 'node-info'));
+    }
+  </script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <section>Save a chrome har then load it via the browse button.  Branch nodes can be toggled by clicking. </section>
+  <input type="file" accept=".har,.json,application/json,text/json" onchange="drawCanvas(this.files)"/>
+  <label for="blacklist">blacklist mimetypes</label>
+  <input type="text" id="blacklist" value="image,font,octet-stream"/>
+  <button onclick="hartree.clearTree()">clear</button>
+  <section id="status"></section>
+  <section id="node-info"></section>
+  <section id="canvas"></section>
+</body>
+</html>

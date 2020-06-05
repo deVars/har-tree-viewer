@@ -1,0 +1,39 @@
+#node-info {
+    height: 16rem;
+}
+
+#tree-container {
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+#paths-root {
+    fill: none;
+    stroke: slategray;
+    stroke-opacity: 0.5;
+    stroke-width: 1.5;
+}
+
+#nodes-root {
+    stroke-linejoin: round;
+    stroke-width: 3;
+}
+
+.node {
+    r: 2.5;
+}
+.node-has-children{
+    fill: coral;
+}
+.node-has-no-children {
+    fill: slategray;
+}
+.label-align-start {
+    text-anchor: start;
+}
+.label-align-end {
+    text-anchor: end;
+}
+.label-outline {
+    stroke: #fafafe;
+}

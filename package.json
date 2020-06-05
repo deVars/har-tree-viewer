@@ -1,0 +1,35 @@
+{
+  "name": "hartreeview",
+  "version": "0.3.0",
+  "description": "view chrome HARs like a tree",
+  "main": "hartreemin.js",
+  "scripts": {
+    "build": "node ./tsicklize.js && rollup -c",
+    "clean": "rm ./ts-compiled/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@types/d3-hierarchy": "^1.1.6",
+    "@types/d3-path": "^1.0.8",
+    "@types/d3-selection": "^1.4.1",
+    "@types/d3-shape": "^1.3.2",
+    "@types/d3-transition": "^1.1.6",
+    "@types/har-format": "^1.2.4",
+    "d3-hierarchy": "^1.1.9",
+    "d3-shape": "^1.3.7",
+    "d3-transition": "^1.3.2"
+  },
+  "devDependencies": {
+    "@ampproject/rollup-plugin-closure-compiler": "^0.24.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "d3-interpolate": "^1.4.0",
+    "d3-selection": "^1.4.1",
+    "google-closure-library": "^20200406.0.0",
+    "rollup": "^2.13.1",
+    "tsickle": "^0.38.1",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  }
+}

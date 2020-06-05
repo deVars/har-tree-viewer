@@ -1,0 +1,4 @@
+**/.idea
+**/dist/*.min.js
+**/node_modules
+**/ts-compiled
